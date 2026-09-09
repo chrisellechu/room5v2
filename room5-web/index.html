@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Room 5 | Distribute the Remedy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="admin-gear" id="admin-gear">&#9881;</button>
+<div class="admin-overlay" id="admin-overlay"></div>
+
+<!-- Station transition overlay -->
+<div class="stn-transition" id="stn-transition">
+  <div class="stn-tr-num" id="stn-tr-num">1</div>
+  <div class="stn-tr-name" id="stn-tr-name">Station 1</div>
+  <div class="stn-tr-desc" id="stn-tr-desc">Station description</div>
+  <button class="btn-stn-ready" id="btn-stn-ready">Start Station</button>
+</div>
+
+<!-- SCREEN 1: INTRO -->
+<section class="screen active" id="s-intro">
+  <div class="i-eye" id="i-label">ROOM 5 | DISTRIBUTE THE REMEDY</div>
+  <h1 class="i-title" id="i-title">Quality Control<br>Challenge</h1>
+  <p class="i-sub" id="i-sub">Our remedy is ready for manufacturing. Sort the vials through three quality control stations — check for defects, verify weight, and confirm color. Only perfect vials reach mass distribution.</p>
+  <p class="i-goal" id="i-goal">Find and pack 10 perfect vials.</p>
+  <button class="btn-start" id="btn-start">Enter Manufacturing Floor</button>
+</section>
+
+<!-- SCREEN 2: RACK VIEW -->
+<section class="screen" id="s-rack">
+  <div class="rack-title" id="rack-title">Manufacturing Vial Rack</div>
+  <div class="rack-sub" id="rack-sub">Inspect all vials through three quality control stations. Sort defective vials before mass distribution.</div>
+  <div class="vial-rack" id="vial-rack"></div>
+  <button class="btn-begin" id="btn-begin">Begin Quality Control</button>
+</section>
+
+<!-- SCREEN 3: QC STATION -->
+<section class="screen" id="s-station">
+  <div class="stn-header">
+    <div class="stn-name" id="stn-name">Station 1 — Defects</div>
+    <div class="stn-prog" id="stn-prog">Vial 1 of 8</div>
+  </div>
+  <div class="stn-body">
+    <div class="stn-left">
+      <div class="stn-display">
+        <div class="stn-display-title" id="stn-display-title">Scanner Display</div>
+        <div class="stn-vis" id="stn-vis"></div>
+      </div>
+      <div class="result-panel">
+        <div class="result-question" id="result-question">What does the scan show?</div>
+        <div class="result-choices" id="result-choices"></div>
+      </div>
+    </div>
+    <div class="stn-right">
+      <div class="vial-queue">
+        <div class="queue-title">Vials — This Station</div>
+        <div class="queue-grid" id="queue-grid"></div>
+      </div>
+      <div class="approved-panel">
+        <div class="approved-header">
+          <div class="approved-title">Approved for Distribution</div>
+          <div class="approved-count" id="approved-count">0 / 10</div>
+        </div>
+        <div class="flagged-line" id="flagged-line">0 flagged at this station</div>
+        <div class="pedestal-grid" id="pedestal-grid"></div>
+      </div>
+      <div class="dot-matrix" id="stn-dots" style="grid-template-columns:repeat(8,1fr)">
+        <!-- dots filled by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN 4: DISTRIBUTION -->
+<section class="screen" id="s-dist">
+  <div class="dist-title" id="dist-title">Distribution Station</div>
+  <div class="dist-sub" id="dist-sub">These vials passed all quality checks. They are ready for mass distribution.</div>
+  <div class="dist-rack" id="dist-rack"></div>
+  <div class="dist-score" id="dist-score"></div>
+  <button class="btn-dist" id="btn-dist">Activate Distribution</button>
+</section>
+
+<!-- SCREEN 5: BREAKTHROUGH -->
+<section class="screen" id="s-break">
+  <div class="break-glow"></div>
+  <div class="break-title" id="break-title">Breakthrough!</div>
+  <div class="break-script" id="break-script">Loading voiceover…</div>
+  <div class="break-vials" id="break-vials"></div>
+  <div class="break-audio-status" id="break-audio-status">▶ Playing voiceover…</div>
+  <button class="break-btn" id="break-btn">Start a New Group</button>
+</section>
+
+<audio id="vo-audio" preload="auto"></audio>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+{
+  "roomLabel": "ROOM 5 | DISTRIBUTE THE REMEDY",
+  "gameTitle": "Quality Control Challenge",
+  "introSub": "Our remedy is ready for manufacturing. Sort the vials through three quality control stations \u2014 confirm color, check for defects, and verify length. Only perfect vials reach mass distribution.",
+  "goalText": "Find and pack 10 perfect vials.",
+  "introBtn": "Enter Manufacturing Floor",
+  "rackTitle": "Manufacturing Vial Rack",
+  "rackSub": "Inspect all vials through three quality control stations. Sort defective vials before mass distribution.",
+  "distTitle": "Distribution Station",
+  "distSub": "These vials passed all quality checks. They are ready for mass distribution.",
+  "distBtn": "Activate Distribution",
+  "breakTitle": "Breakthrough!",
+  "breakScript": "Our team has done it. Thanks to your rigorous quality control, every vial sent to distribution is perfect \u2014 correct length, the right color, and free of defects. This medicine will now reach the people who need it most. Your work today is part of something much bigger: Pfizer's mission to deliver breakthroughs that change patients' lives.",
+  "adminPin": "5500",
+  "showGear": true,
+  "inspection3Type": "length",
+  "targetLength": 5.0,
+  "targetWeight": 10.0,
+  "correctColor": "correct",
+  "approvalGoal": 10,
+  "stations": [
+    {
+      "num": 1,
+      "type": "color",
+      "name": "Color",
+      "icon": "\ud83c\udfa8",
+      "desc": "Color sensor compares each vial against the reference sample to detect any color deviation.",
+      "displayTitle": "Color Sensor",
+      "question": "How does the color compare?"
+    },
+    {
+      "num": 2,
+      "type": "defect",
+      "name": "Defects",
+      "icon": "\ud83d\udd0d",
+      "desc": "X-ray scanner checks each vial for structural defects \u2014 cracks, chips, or fractures.",
+      "displayTitle": "X-Ray Scanner",
+      "question": "What does the X-ray scan show?"
+    },
+    {
+      "num": 3,
+      "type": "measure",
+      "name": "Length",
+      "icon": "\ud83d\udccf",
+      "desc": "Precision gauge verifies each vial is exactly 5 inches long.",
+      "displayTitle": "Precision Gauge",
+      "question": "What does the length reading show?"
+    }
+  ],
+  "vials": [
+    {
+      "id": "V01",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V02",
+      "defect": "crack",
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V03",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V04",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V05",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "wrong"
+    },
+    {
+      "id": "V06",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V07",
+      "defect": "chip",
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V08",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V09",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V10",
+      "defect": null,
+      "length": 3.5,
+      "weight": 7.0,
+      "color": "correct"
+    },
+    {
+      "id": "V11",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V12",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V13",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "wrong"
+    },
+    {
+      "id": "V14",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    },
+    {
+      "id": "V15",
+      "defect": null,
+      "length": 5.0,
+      "weight": 10.0,
+      "color": "correct"
+    }
+  ],
+  "audioSrc": "assets/breakthrough-vo.mp3"
+}
