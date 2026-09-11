@@ -22,10 +22,10 @@ const SVG_NS = 'http://www.w3.org/2000/svg';
 function vialSVG({defect=null,color='correct',size=52,label=''}={}){
   const w=size, h=size*2.8;
   const cx=w/2;
-  const bodyFill = color==='correct' ? '#2b6cb0' : '#5b3a8a';
+  const bodyFill = color==='correct' ? '#2860C6' : '#5b3a8a';
   const hlFill = color==='correct' ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.18)';
-  const capFill = color==='correct' ? '#588ac5' : '#7a58b0';
-  const topFill = color==='correct' ? '#82a4d3' : '#9a78c8';
+  const capFill = color==='correct' ? '#7398DA' : '#7a58b0';
+  const topFill = color==='correct' ? '#9EB7E5' : '#9a78c8';
   let crack='';
   if(defect==='crack'){
     crack=`<path d="M${cx-3} ${h*0.25} L${cx+5} ${h*0.38} L${cx-4} ${h*0.5} L${cx+3} ${h*0.62}" stroke="rgba(255,255,255,0.85)" stroke-width="2" fill="none" stroke-linecap="round"/>
@@ -261,13 +261,13 @@ function renderStationVis(stnIdx, vial){
     // Color sensor
     vis.style.flexDirection='column';vis.style.gap='10px';
     const colorOK = vial.color==='correct';
-    const vialFill = colorOK?'#2b6cb0':'#5b3a8a';
+    const vialFill = colorOK?'#2860C6':'#5b3a8a';
     const panel = document.createElement('div');
     panel.style.cssText='display:flex;align-items:center;gap:12px;';
     panel.innerHTML=`
       <div style="text-align:center">
         <div style="font-size:9px;color:#82a4d3;letter-spacing:.08em;margin-bottom:5px;">REFERENCE</div>
-        <div style="width:40px;height:70px;background:#2b6cb0;border-radius:6px;border:2px solid #82a4d3;"></div>
+        <div style="width:40px;height:70px;background:#2860C6;border-radius:6px;border:2px solid #82a4d3;"></div>
       </div>
       <div style="color:#82a4d3;font-size:18px;">vs</div>
       <div style="text-align:center">
